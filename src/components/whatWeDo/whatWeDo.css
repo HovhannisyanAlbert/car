@@ -1,0 +1,62 @@
+.whatWeDo_item {
+    max-width: 362px;
+    min-height: 300px;
+    ;
+    border: 1px solid #D2D3D6;
+    border-radius: 6px;
+    padding: 32px;
+    display: flex;
+    margin: 5px auto;
+}
+
+.whatWeDo_item-cub {
+    width: 52px;
+    height: 52px;
+    background-color: antiquewhite;
+    margin-right: 24px;
+}
+
+.whatWeDo_item-title {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #363839;
+    margin-bottom: 0;
+}
+
+.whatWeDo_item-description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #656565;
+    margin-top: 12px;
+    margin-bottom: 0;
+    max-width: 222px;
+    height: 166px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* lg - For large devices */
+@media screen and (max-width: 992px) {}
+
+/* md - For medium devices */
+@media screen and (max-width: 768px) {
+    .whatWeDo_item {
+        padding: 32px 10px;
+    }
+
+    .whatWeDo_item-cub {
+        margin-right: 15px;
+    }
+}
+
+/* sm */
+@media screen and (max-width: 576px) {}
+
+/* xs - For small devices */
+@media screen and (max-width: 350px) {}

@@ -1,0 +1,10 @@
+.popularCars_container {
+    padding: 0 15px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #A0A4A3 !important;
+    font-weight: bold !important;
+    font-size: 27px !important;
+}

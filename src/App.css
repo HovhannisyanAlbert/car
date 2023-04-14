@@ -1,0 +1,60 @@
+/* Start Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;1,400&display=swap');
+/* End Fonts */
+
+.max_width {
+    max-width: 1520px;
+}
+
+select.form-control {
+    -webkit-appearance: menulist !important;
+    -moz-appearance: menulist !important;
+    -ms-appearance: menulist !important;
+    -o-appearance: menulist !important;
+    appearance: menulist !important;
+}
+
+.section_title {
+    margin-top: 200px;
+    margin-bottom: 60px;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: #363839;
+}
+
+.disabled>.page-link {
+    background-color: #dddddd !important;
+}
+
+.active>.page-link {
+    background-color: #B11C32 !important;
+    border-color: #B11C32 !important;
+    color: #ffffff !important;
+}
+
+.page-link {
+    color: #B11C32 !important;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* lg - For large devices */
+@media screen and (max-width: 992px) {
+    .section_title {
+        margin-top: 100px;
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+/* md - For medium devices */
+@media screen and (max-width: 768px) {}
+
+/* sm */
+@media screen and (max-width: 576px) {}
+
+/* xs - For small devices */
+@media screen and (max-width: 350px) {}

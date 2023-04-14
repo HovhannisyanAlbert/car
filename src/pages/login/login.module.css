@@ -1,0 +1,37 @@
+.title {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 46px;
+    color: #B11C32;
+}
+
+.description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #656565;
+}
+
+.rightButtons_header_login {
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #B11C32;
+    border-radius: 4px;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #B11C32;
+}
+
+.rightButtons_header_login:hover {
+    background-color: #B11C32;
+    color: #FFFFFF;
+}

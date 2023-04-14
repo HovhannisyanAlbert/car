@@ -1,0 +1,200 @@
+.banner_img {
+    position: relative;
+    background-image: url('../../assets/img/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 740px;
+}
+
+.banner_img-layer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.64);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner_content {
+    max-width: 614px;
+    padding-top: 200px;
+    padding-bottom: 354px;
+}
+
+.banner_title {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 102px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: sticky;
+}
+
+.banner_description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    position: sticky;
+}
+
+.banner_form {
+    position: relative;
+    top: -68px;
+    max-width: 1264px;
+}
+
+.banner_form_tab-btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #656565;
+    background-color: #ffffff;
+    padding: 10px 32px;
+    border: 0;
+}
+
+.banner_form_btn-1 {
+    border-radius: 4px 0px 0px 0px;
+}
+
+.banner_form_btn-2 {
+    border-radius: 0px 4px 0px 0px;
+}
+
+.banner_form_tab-btn.active,
+.banner_form_tab-btn:hover {
+    color: #FFFFFF;
+    background-color: #1B1919;
+}
+
+.banner_form_content {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.banner_form_input {
+    background-color: #ffffff;
+    padding: 12px 38px 28px 32px;
+    border-top: 1px solid #D2D3D6;
+    border-right: 1px solid #D2D3D6;
+}
+
+.banner_form_input-lt {
+    border-radius: 4px 0px 0px 0px;
+    border-left: 1px solid #D2D3D6;
+}
+
+.banner_form_input-lb {
+    border-radius: 0px 4px 0px 0px;
+}
+
+.banner_form_input-rt {
+    border-radius: 0px 0px 0px 4px;
+    border-bottom: 1px solid #D2D3D6;
+    border-left: 1px solid #D2D3D6;
+}
+
+.banner_form_input-bb {
+    border-bottom: 1px solid #D2D3D6;
+}
+
+.banner_form_input-rb {
+    border-radius: 0px 0px 4px 0px;
+    border-bottom: 1px solid #D2D3D6;
+}
+
+.banner_form_btn-red {
+    width: 100%;
+    height: 100%;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background: #B11C32;
+    border-radius: 0px 0px 4px 0px;
+    border: 0;
+}
+
+.banner_form_btn-red:hover {
+    color: #B11C32;
+    background: #FFFFFF;
+}
+
+.banner_form-label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #A7AAAF;
+}
+
+.banner_form-control {
+    border: 0;
+    padding-left: 0;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* xl */
+@media screen and (max-width: 1200px) {}
+
+/* lg - For large devices */
+@media screen and (max-width: 992px) {
+    .banner_content {
+        padding-top: 85px;
+        padding-bottom: 100px;
+    }
+
+    .banner_form {
+        top: -50px;
+    }
+}
+
+/* md - For medium devices */
+@media screen and (max-width: 768px) {
+    .banner_form_btn-red {
+        min-height: 90px;
+    }
+}
+
+/* sm */
+@media screen and (max-width: 576px) {
+    .banner_content {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+
+    .banner_title {
+        font-size: 35px;
+        line-height: 34px;
+    }
+
+    .banner_description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .banner_form {
+        position: unset;
+        margin-top: 10px;
+    }
+}
+
+/* xs - For small devices */
+@media screen and (max-width: 350px) {}

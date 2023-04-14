@@ -1,0 +1,64 @@
+.news_container {
+    max-width: 747px;
+    background: #FFFFFF;
+    border: 1px solid #D2D3D6;
+    border-radius: 6px;
+    margin: 0 auto 24px;
+}
+
+.news_img {
+    border-radius: 6px 0px 0px 6px;
+}
+
+.news_content {
+    padding: 20px;
+}
+
+.news_title {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #363839;
+}
+
+.news_description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #656565;
+    margin-top: 22px;
+}
+
+.news_redMore-btn,
+.news_redMore-btn:hover {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #B11C32;
+}
+
+.news_redMore-btn::after {
+    content: url('../../assets/img/icons/red-arrow-right.png');
+    margin-left: 10px;
+}
+
+.news_redMore-btn:hover::after {
+    margin-left: 15px;
+}
+
+.news_shoMore-btn {
+    margin-top: 36px;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 34px;
+    text-decoration-line: underline;
+    color: #363839;
+}

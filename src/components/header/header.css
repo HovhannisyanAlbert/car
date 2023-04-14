@@ -1,0 +1,136 @@
+.top_header {
+    background-color: #1B1919;
+    padding: 20px;
+}
+
+.top_header .max_width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top_header-icon {
+    margin-right: 28px;
+}
+
+.top_header-phone {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.top_header-phone img {
+    margin-right: 9px;
+}
+
+.bottom_header {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.bottom_header-logo {
+    max-width: 104px;
+    max-height: 72px;
+}
+
+.bottom_header-link {
+    margin: 0 20px;
+}
+
+
+.bottom_header-link a {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #656565;
+}
+
+.rightButtons_header_login {
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #B11C32;
+    border-radius: 4px;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #B11C32;
+}
+
+.rightButtons_header_login:hover {
+    background-color: #B11C32;
+    color: #FFFFFF;
+}
+
+.rightButtons_header_SignUp {
+    padding: 12px 34px;
+    background-color: #B11C32;
+    border-radius: 4px;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 8px;
+}
+
+.rightButtons_header_SignUp:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #B11C32;
+    color: #B11C32;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -70px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* xl */
+@media screen and (max-width: 1200px) {
+    .rightButtons_header_login,
+    .rightButtons_header_SignUp {
+        padding: 10px 25px;
+    }
+    .bottom_header-link {
+        margin: 0 15px;
+    }
+}
+
+/* lg - For large devices */
+@media screen and (max-width: 992px) {
+    .rightButtons_header {
+        padding-bottom: 0.5rem;
+    }
+
+    .bottom_header-link {
+        margin: unset;
+    }
+
+    .rightButtons_header {
+        margin-top: 10px;
+    }
+}
+
+/* sm */
+@media screen and (max-width: 576px) {
+    .bottom_header-logo {
+        max-width: 75px;
+        max-height: 72px;
+    }
+}

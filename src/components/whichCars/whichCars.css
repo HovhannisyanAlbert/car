@@ -1,0 +1,110 @@
+#whichCars {
+    margin-top: 200px;
+}
+
+.whichCars_img {
+    position: relative;
+    background-image: url('../../assets/img/whichCars.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 600px;
+}
+
+.whichCars_img-layer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.64);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.whichCars_content {
+    max-width: 619px;
+    padding-top: 116px;
+    padding-bottom: 120px;
+    margin-left: 115px;
+}
+
+.whichCars_title {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 66px;
+    color: #FFFFFF;
+    position: sticky;
+}
+
+.whichCars_description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    color: #E0E0E0;
+    position: sticky;
+}
+
+.whichCars_btn {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    color: #E0E0E0;
+    background: #B11C32;
+    border-radius: 4px;
+    padding: 12px 50px;
+    position: sticky;
+    border: none;
+    margin-top: 50px;
+}
+
+.whichCars_btn:hover {
+    color: #B11C32;
+    background: #E0E0E0;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* xl */
+@media screen and (max-width: 1200px) {}
+
+/* lg - For large devices */
+@media screen and (max-width: 992px) {
+    .whichCars_content {
+        padding-top: 85px;
+        padding-bottom: 100px;
+        margin-left: unset;
+    }
+}
+
+/* md - For medium devices */
+@media screen and (max-width: 768px) {}
+
+/* sm */
+@media screen and (max-width: 576px) {
+    .whichCars_content {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+
+    .whichCars_title {
+        font-size: 35px;
+        line-height: 34px;
+    }
+
+    .whichCars_description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .whichCars_btn {
+        margin-top: 25px;
+    }
+}
+
+/* xs - For small devices */
+@media screen and (max-width: 350px) {}

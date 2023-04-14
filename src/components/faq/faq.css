@@ -1,0 +1,33 @@
+.faq_container {
+    border: 1px solid #D2D3D6;
+    border-radius: 6px;
+    padding: 32px 37px;
+    margin-bottom: 24px;
+}
+
+.faq_question,
+.faq_answer {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #363839;
+}
+
+.faq_question {
+    cursor: pointer;
+}
+
+.faq_question-icon {
+    color: #B11C32;
+    background-color: transparent;
+    border: none;
+    font-size: 36px;
+    font-weight: 500;
+    margin-right: 13px;
+}
+
+.faq_answer {
+    font-size: 18px;
+}

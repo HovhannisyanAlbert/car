@@ -1,0 +1,102 @@
+.car {
+    background: #FFFFFF;
+    border: 1px solid #D2D3D6;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.car_container {
+    padding: 20px 32px 32px;
+}
+
+.car_name {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    color: #363839;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.car_price {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: #B11C32;
+    margin-bottom: 36px;
+}
+
+.car_show-btn {
+    padding: 8px 32px;
+    background: #1B1919;
+    opacity: 0.9;
+    border-radius: 4px;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.car_show-btn:hover {
+    background: #FFFFFF;
+    color: #1B1919;
+    /* border: 1px solid #1B1919; */
+    outline: 1px solid #1B1919;
+}
+
+.car_heart-btn {
+    background: #FFFFFF;
+    border: 1px solid #1B1919;
+    border-radius: 4px;
+    padding: 13px;
+    margin-left: 16px;
+}
+
+.car_img {
+    text-align: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car_img>img {
+    max-width: max-content;
+    max-height: 200px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* xl */
+@media screen and (max-width: 1200px) {
+    .car_show-btn {
+        padding: 8px 7px;
+        line-height: 18px;
+    }
+}
+
+/* lg - For large devices */
+@media screen and (max-width: 992px) {
+
+    .car_show-btn {
+        padding: 8px 32px;
+        line-height: 28px;
+    }
+}
+
+/* md - For medium devices */
+@media screen and (max-width: 768px) {}
+
+/* sm */
+@media screen and (max-width: 576px) {}
+
+/* xs - For small devices */
+@media screen and (max-width: 350px) {}
