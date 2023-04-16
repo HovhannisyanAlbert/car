@@ -34,15 +34,15 @@ const Form = () => {
 
   useLayoutEffect(() => {
     if (site) body.current.site = site;
-    else if (price__gt) body.current.price__gt = price__gt;
-    else if (price__lt) body.current.price__lt = price__lt;
-    else if (make) body.current.make = make;
-    else if (exterior_color) body.current.exterior_color = exterior_color;
-    else if (year) body.current.year = year;
-    else if (transmission) body.current.transmission = transmission;
-    else if (bodystyle) body.current.bodystyle = bodystyle;
-    else if (fuel_type) body.current.fuel_type = fuel_type;
-    else if (mileage) body.current.mileage = mileage;
+    if (price__gt) body.current.price__gt = price__gt;
+    if (price__lt) body.current.price__lt = price__lt;
+    if (make) body.current.make = make;
+    if (exterior_color) body.current.exterior_color = exterior_color;
+    if (year) body.current.year = year;
+    if (transmission) body.current.transmission = transmission;
+    if (bodystyle) body.current.bodystyle = bodystyle;
+    if (fuel_type) body.current.fuel_type = fuel_type;
+    if (mileage) body.current.mileage = mileage;
   }, [
     price__gt,
     price__lt,
@@ -55,32 +55,24 @@ const Form = () => {
     fuel_type,
     mileage,
   ]);
-
-  const [price, setPrice] = useState({
-    priceLess: 0,
-    priceGreat: 0,
-    mileage: "",
-  });
-
-  // const onChange = (e) => {
-
-  //   if (e.target.value) {
-  //     body.current[e.target.name] = e.target.value;
-  //   } else {
-  //     delete body.current[e.target.name];
-  //   }
-  // };
+  // const [price, setPrice] = useState({
+  //   priceLess: 0,
+  //   priceGreat: 0,
+  //   mileage: "",
+  // });
 
   const onChange = (e) => {
-    setPrice({ ...price, [e.target.name]: e.target.value });
+    if (e.target.value) {
+      body.current[e.target.name] = e.target.value;
+    }
   };
 
+  // const onChange = (e) => {
+  //   setPrice({ ...price, [e.target.name]: e.target.value });
+  // };
+
   const onSubmit = () => {
-    axios
-      .get(
-        `http://65.109.11.93:10000/api/data/?price=&site=&stock_type=&make=&model=&bodystyle=&canonical_mmt=&customer_id=&fuel_type=&listing_id=&mileage=&seller_type=&trim=&year=&exterior_color=&transmission=&price__gt=${price.priceGreat}&price__lt=${price.priceLess}&mileage__gt=100&mileage__lt=100000`
-      )
-      .then((res) => console.log(res.data));
+    console.log(body)
     navigate({
       pathname: "/",
       search: createSearchParams(body.current).toString(),
@@ -199,10 +191,10 @@ const Form = () => {
                       <input
                         className="form-control banner_form-control"
                         type="number"
-                        name="priceGreat"
+                        name="price__gt"
                         placeholder="Price is greater than"
-                        id="price_gt"
-                        value={price.priceGreat}
+                        id="price__gt"
+                        //value={price.priceGreat}
                         min={0}
                         onChange={onChange}
                       />
@@ -214,10 +206,10 @@ const Form = () => {
                       <input
                         className="form-control banner_form-control"
                         type="number"
-                        name="priceLess"
+                        name="price__lt"
                         placeholder="Price is less than"
                         id="price_lt"
-                        value={price.priceLess}
+                        //value={price.priceLess}
                         min={0}
                         onChange={onChange}
                       />
@@ -232,7 +224,7 @@ const Form = () => {
                     className="form-control banner_form-control"
                     type="number"
                     name="mileage"
-                    value={price.mileage}
+                    //value={price.mileage}
                     placeholder="Mileage"
                     id="mileage"
                     min={0}

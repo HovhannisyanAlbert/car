@@ -16,7 +16,6 @@ const Car = ({
   vin,
   showDetails,
 }) => {
-  console.log(price)
   return (
     <tr>
       <th scope="row">{index}</th>

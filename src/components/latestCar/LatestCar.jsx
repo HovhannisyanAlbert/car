@@ -11,40 +11,30 @@ const LatestCar = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const page = Number(searchParams.get("page"));
-  const site = searchParams.get("site");
-  const price__gt = searchParams.get("price__gt");
-  const price__lt = searchParams.get("price__lt");
-  const make = searchParams.get("make");
-  const exterior_color = searchParams.get("exterior_color");
-  const year = searchParams.get("year");
-  const transmission = searchParams.get("transmission");
-  const bodystyle = searchParams.get("bodystyle");
-  const fuel_type = searchParams.get("fuel_type");
-  const mileage = searchParams.get("mileage");
+  // const site = searchParams.get("site");
+  // const price__gt = searchParams.get("price__gt");
+  // const price__lt = searchParams.get("price__lt");
+  // const make = searchParams.get("make");
+  // const exterior_color = searchParams.get("exterior_color");
+  // const year = searchParams.get("year");
+  // const transmission = searchParams.get("transmission");
+  // const bodystyle = searchParams.get("bodystyle");
+  // const fuel_type = searchParams.get("fuel_type");
+  // const mileage = searchParams.get("mileage");
 
   useEffect(() => {
     const url = CAR_LIST + window.location.search;
+    console.log('render')
     axios
       .get(url)
       .then((res) => {
+        console.log(res.data.results)
         setData(res.data);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [
-    page,
-    site,
-    price__gt,
-    price__lt,
-    make,
-    exterior_color,
-    year,
-    transmission,
-    bodystyle,
-    fuel_type,
-    mileage,
-  ]);
+  }, [searchParams]);
 
   return (
     <div className="max_width container-fluid">
