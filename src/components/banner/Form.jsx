@@ -6,9 +6,12 @@ import {
   createSearchParams,
 } from "react-router-dom";
 import { MAKE } from "../../config/api";
-import BannerOption from "./bannerPage/BannerOption";
+
+import BannerOilTYpe from "./bannerPage/BannerOilTYpe";
+import BannerDataOption from "./bannerPage/BannerDataOption";
 
 const Form = () => {
+  
   const [makes, setMake] = useState();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -55,11 +58,6 @@ const Form = () => {
     fuel_type,
     mileage,
   ]);
-  // const [price, setPrice] = useState({
-  //   priceLess: 0,
-  //   priceGreat: 0,
-  //   mileage: "",
-  // });
 
   const onChange = (e) => {
     if (e.target.value) {
@@ -67,12 +65,7 @@ const Form = () => {
     }
   };
 
-  // const onChange = (e) => {
-  //   setPrice({ ...price, [e.target.name]: e.target.value });
-  // };
-
   const onSubmit = () => {
-    console.log(body)
     navigate({
       pathname: "/",
       search: createSearchParams(body.current).toString(),
@@ -194,7 +187,6 @@ const Form = () => {
                         name="price__gt"
                         placeholder="Price is greater than"
                         id="price__gt"
-                        //value={price.priceGreat}
                         min={0}
                         onChange={onChange}
                       />
@@ -209,7 +201,6 @@ const Form = () => {
                         name="price__lt"
                         placeholder="Price is less than"
                         id="price_lt"
-                        //value={price.priceLess}
                         min={0}
                         onChange={onChange}
                       />
@@ -224,7 +215,6 @@ const Form = () => {
                     className="form-control banner_form-control"
                     type="number"
                     name="mileage"
-                    //value={price.mileage}
                     placeholder="Mileage"
                     id="mileage"
                     min={0}
@@ -258,110 +248,11 @@ const Form = () => {
               role="tabpanel"
               aria-labelledby="nav-body_style-tab"
             >
-              <div className="row">
-                <div className="col-12 col-md-4 banner_form_input banner_form_input-lt">
-                  <BannerOption onChange={onChange} />
-                </div>
-                <div className="col-12 col-md-4 banner_form_input">
-                  <label className="banner_form-label" htmlFor="year">
-                    Year
-                  </label>
-                  <select
-                    className="form-control banner_form-control"
-                    id="year"
-                    name="year"
-                    onChange={onChange}
-                  >
-                    <option value="">Year</option>
-                    {options.map((year) => {
-                      return (
-                        <option value={year} key={year}>
-                          {year}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </div>
-                <div className="col-12 col-md-4 banner_form_input banner_form_input-lb">
-                  <label className="banner_form-label" htmlFor="transmission">
-                    Transmission
-                  </label>
-                  <select
-                    className="form-control banner_form-control"
-                    id="transmission"
-                    name="transmission"
-                    onChange={onChange}
-                  >
-                    <option value="">Transmission</option>
-                    <option value="Manual">Manual</option>
-                    <option value="Automatic">Automatic</option>
-                    <option value="Automatic CVT">Automatic CVT</option>
-                    <option value="Automatic CVT">Electric</option>
-                    <option value="6-Speed Automatic with Auto-Shift">
-                      6-Speed Automatic with Auto-Shift
-                    </option>
-                    <option value="8-Speed Automatic">8-Speed Automatic</option>
-                    <option value="7-Speed Automatic with Auto-Shift">
-                      7-Speed Automatic with Auto-Shift
-                    </option>
-                    <option value="6-Speed Automatic with Auto-Shift">
-                      6-Speed Automatic with Auto-Shift
-                    </option>
-                    <option value="9-Speed Automatic">9-Speed Automatic</option>
-                    <option value="10-Speed Automatic">
-                      10-Speed Automatic
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-12 col-md-4 banner_form_input banner_form_input-bb">
-                  <label className="banner_form-label" htmlFor="bodystyle">
-                    Body Style
-                  </label>
-                  <select
-                    className="form-control banner_form-control"
-                    id="bodystyle"
-                    name="bodystyle"
-                    onChange={onChange}
-                  >
-                    <option value="">Body Style</option>
-                    <option value="TRUCKS">TRUCKS</option>
-                    <option value="SUV">SUV</option>
-                    <option value="VANS">VANS</option>
-                    <option value="Sedan">Sedan</option>
-                    <option value="Coupe">Coupe</option>
-                    <option value="Wagon">Wagon</option>
-                    <option value="Pickup">Pickup</option>
-                    <option value="Pickup Truck">Pickup Truck</option>
-                    <option value="Passenger Van">Passenger Van</option>
-                    <option value="Convertible">Convertible</option>
-                    <option value="4dr Car">4dr Car</option>
-                  </select>
-                </div>
-                <div className="col-12 col-md-4 banner_form_input banner_form_input-rt">
-                  <label className="banner_form-label" htmlFor="fuel_type">
-                    Fuel Type
-                  </label>
-                  <select
-                    className="form-control banner_form-control"
-                    id="fuel_type"
-                    name="fuel_type"
-                    onChange={onChange}
-                  >
-                    <option value="">Fuel Type</option>
-                    <option value="Diesel">Diesel</option>
-                    <option value="Gasoline">Gasoline</option>
-                    <option value="Hybrid">Hybrid</option>
-                    <option value="Electric">Electric</option>
-                  </select>
-                </div>
-                <div className="col-12 col-md-4 banner_form_input banner_form_input-rb p-0">
-                  <button className="banner_form_btn-red" onClick={onSubmit}>
-                    Search
-                  </button>
-                </div>
-              </div>
+       
+                    
+                    <BannerDataOption onChange={onChange} options={options} />
+
+                <BannerOilTYpe onChange={onChange} onSubmit={onSubmit}/>
             </div>
           </div>
         </div>

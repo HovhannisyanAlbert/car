@@ -24,11 +24,11 @@ const LatestCar = () => {
 
   useEffect(() => {
     const url = CAR_LIST + window.location.search;
-    console.log('render')
+
     axios
       .get(url)
       .then((res) => {
-        console.log(res.data.results)
+   
         setData(res.data);
       })
       .catch((error) => {
